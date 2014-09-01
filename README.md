@@ -10,8 +10,8 @@ Usage
 
 Make sure your application container exposes port 80. Then, launch it:
 
-	docker run -d --name web1 tutum/hello-world
-	docker run -d --name web2 tutum/hello-world
+	docker run -d --name web1 -p 3000:80 tutum/hello-world
+	docker run -d --name web2 -p 3001:80 tutum/hello-world
 
 Then, run tutum/haproxy-http linking it to the target containers:
 
